@@ -1,14 +1,18 @@
+from math import *
 import sys
 OCC = 1
 
-fileContent = open("larg_input.txt", "r")
+fileContent = open("B-small-practice.in", "r")
 writeFile = open("output.txt", "w")
 max= 0
+mainData = []
 for line in fileContent:
-	newline = int(line)
-	data = [int(i) for i in str(newline)]
-    for i in data:
-        if i > max:
-            max=i
-    print(max)
-
+	arr = []
+	currentLine = int(line)
+	arr.append(currentLine)
+	for u in arr:
+		mainData.append(u)
+		for v in mainData:
+			data = v
+	print data
+	
