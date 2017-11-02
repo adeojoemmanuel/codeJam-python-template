@@ -1,12 +1,10 @@
-def range(start=0,stop=None,step=1):
-	if stop is None:
-		#handle single argument case. ugly...
-		stop = start
-		start = 0
-	i = start
-	while i < stop:
-		yield i
-		i += step
+list1 = [[1,2,3],[4,5,6],[7,8,9]]
 
-for i in range(1, 111111111111111110):
-	print i
+def joinAll(Mulist):
+	index_all=[]
+	for i in list1:
+		for u in i:
+			index_all.append(u)
+	return index_all
+
+print joinAll(list1)

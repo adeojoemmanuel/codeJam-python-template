@@ -7,7 +7,7 @@ fileContent = open("B-large-practice.in", "r")
 writeFile = open("B_large-practice.out", "w")
 # nOTC = fileContent[0]
 def convertInt(intVal):
-	data = int("".join(map(str, intVal)))
+	data = "".join(map(int, intVal))
 	return data
 
 def check(num):
@@ -18,19 +18,21 @@ def check(num):
 		covert = int(''.join(str(v) for v in getNlist))
 		subtractor = covert + 1 
 		tidy = num-subtractor
-		print tidy
+		return tidy
 	else:	
 		sort = sorted(split)
 		covert = int(''.join(str(v) for v in sort)) 
 		if(covert == num):
 			tidy =num
-			print tidy
+			return tidy
 		else:
 			newList = split[-1]
 			store.append(newList)
-			getter = convertInt(store)+1
-			nextTidy = num - getter
-			print  nextTidy
+			getter = convertInt(store)
+			additor = getter + 1
+			typeVal = type(additor)
+			nextTidy = num - additor
+			return  typeVal
 # print check(150)
 
 for line in itertools.islice(fileContent, 1, 100):
