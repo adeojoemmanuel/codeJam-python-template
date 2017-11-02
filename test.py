@@ -1,5 +1,12 @@
-import numpy as np
-arr = np.array([1,23,4,6,7,8])
-# avr = [(arr[i], arr[-i-1]) for i in range(len(arr) // 2)]
-# print avr
-print arr[-1]
+def range(start=0,stop=None,step=1):
+	if stop is None:
+		#handle single argument case. ugly...
+		stop = start
+		start = 0
+	i = start
+	while i < stop:
+		yield i
+		i += step
+
+for i in range(1, 111111111111111110):
+	print i
